@@ -1,0 +1,144 @@
+
+body {
+  font-family: Arial, sans-serif;
+  margin: 0;
+  padding: 0;
+  background: #f8f9fa;
+  color: #222;
+}
+
+
+header {
+  text-align: center;
+  padding: 20px;
+  background: linear-gradient(90deg, #006400, #228B22);
+  color: white;
+  position: relative;
+}
+
+
+nav {
+  position: fixed;
+  top: 0;
+  width: 100%;
+  background: #004d00;
+  padding: 10px 0;
+  z-index: 1000; 
+}
+
+nav ul {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+  text-align: center;
+}
+
+nav li {
+  display: inline-block;
+  margin: 0 15px;
+}
+
+nav a {
+  text-decoration: none;
+  color: white;
+  font-weight: bold;
+  transition: color 0.3s ease;
+}
+
+nav a:hover {
+  color: #ffd700;
+}
+
+
+main {
+  display: flex;
+  flex-wrap: wrap;
+  padding: 100px 20px 20px; 
+  gap: 20px;
+}
+
+.fundacion {
+  flex: 2;
+  min-width: 300px;
+  background: white;
+  padding: 20px;
+  border-radius: 10px;
+  box-shadow: 0px 2px 5px rgba(0,0,0,0.1);
+}
+
+.fundacion .imagenes {
+  margin-top: 15px;
+}
+
+.fundacion .imagenes img {
+  max-width: 280px;
+  margin-right: 10px;
+  border-radius: 8px;
+  border: 2px solid #006400;
+}
+
+
+#palmares {
+  flex: 1;
+  min-width: 250px;
+  background: #e9f7ef;
+  padding: 20px;
+  border-radius: 10px;
+  box-shadow: 0px 2px 5px rgba(0,0,0,0.1);
+}
+
+#palmares h2 {
+  color: #006400;
+}
+#mejor {
+  background-color: green;
+  color: white;
+  border: none;
+  padding: 10px 20px;
+  border-radius: 8px;
+  cursor: pointer;
+}
+#mejor:hover {
+  background-color: darkgreen;
+}
+
+#oscuro {
+  background-color: #000000;
+  color: #e3e3e3;
+  border: none;
+  padding: 10px 20px;
+  border-radius: 8px ;
+  cursor:  pointer;
+
+
+}
+
+footer {
+  text-align: center;
+  padding: 15px;
+  margin-top: 20px;
+  background: #222;
+  color: white;
+}
+
+body.oscuro {
+  background-color: #121212;
+  color: rgb(0, 0, 0);
+}
+
+body.oscuro header {
+  background: linear-gradient(90deg, #111, #333);
+}
+
+body.oscuro nav {
+  background: #000000;
+}
+
+body.oscuro #palmares {
+  background: #1e1e1e;
+  color: #ffffff;
+}
+
+body.oscuro a {
+  color: #90ee90;
+}

@@ -1,0 +1,264 @@
+body {
+  font-family: Arial, sans-serif;
+  margin: 0;
+  padding: 0;
+  background: #f8f9fa;
+  color: #222;
+}
+
+header {
+  text-align: center;
+  padding: 20px;
+  background: linear-gradient(90deg, #006400, #228B22);
+  color: white;
+  position: relative;
+}
+
+nav {
+  position: fixed;
+  top: 0;
+  width: 100%;
+  background: #004d00;
+  padding: 10px 0;
+  z-index: 1000; 
+}
+
+nav ul {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+  text-align: center;
+}
+
+nav li {
+  display: inline-block;
+  margin: 0 15px;
+}
+
+nav a {
+  text-decoration: none;
+  color: white;
+  font-weight: bold;
+  transition: color 0.3s ease;
+}
+
+nav a:hover {
+  color: #ffd700;
+}
+
+/* --- SECCIÓN PRINCIPAL (MAIN) - FLEXBOX --- */
+main {
+  display: flex;
+  flex-wrap: wrap;
+  padding: 100px 20px 20px; 
+  gap: 20px; 
+}
+
+/* --- ESTILO UNIFICADO PARA BLOQUES DE CONTENIDO (Decoración y Flexbox) --- */
+/* Se aplica a Fundación, Estadio y Desempeño. */
+.historia-bloque, .fundacion {
+  flex: 1 1 400px; /* Permite que varios bloques se alineen en filas */
+  min-width: 300px;
+  background: white;
+  padding: 20px;
+  border-radius: 10px;
+  box-shadow: 0px 2px 5px rgba(0,0,0,0.1);
+  margin-bottom: 20px;
+}
+
+/* --- ESTILOS PARA PALMARÉS (ASIDE) --- */
+#palmares {
+  flex: 1 1 250px; /* Se mantiene como columna lateral a la derecha */
+  min-width: 250px;
+  background: #e9f7ef;
+  padding: 20px;
+  border-radius: 10px;
+  box-shadow: 0px 2px 5px rgba(0,0,0,0.1);
+}
+
+#palmares h2 {
+  color: #006400;
+}
+
+/* --- ESTILOS DE IMÁGENES DENTRO DE BLOQUES (GENERALIZADO) --- */
+/* Aplica a todos los bloques de historia */
+.historia-bloque .imagenes, .fundacion .imagenes {
+  margin-top: 15px;
+  display: flex;
+  flex-wrap: wrap;
+  gap: 10px; 
+  justify-content: space-between; 
+}
+
+/* CORRECCIÓN: Se generaliza la regla de tamaño de imagen. */
+.historia-bloque .imagenes img, .fundacion .imagenes img {
+  max-width: 48%; /* Dos imágenes por fila */
+  height: auto;
+  border-radius: 8px;
+  border: 2px solid #006400;
+}
+
+/* --- ESTILO PARA RESULTADO HISTÓRICO DESTACADO --- */
+.resultado-destacado {
+  max-width: 48%; 
+  background-color: #f0fff0; 
+  border-left: 5px solid #006400;
+  padding: 15px;
+  border-radius: 5px;
+  align-self: flex-start; 
+}
+.resultado-destacado h3 {
+  margin-top: 0;
+  color: #006400;
+}
+
+/* --- ESTILO ESPECÍFICO PARA LA LISTA DE DESEMPEÑO RECIENTE --- */
+.desempeño-reciente ul {
+    list-style-type: disc;
+    padding-left: 25px;
+}
+
+/* --- SECCIÓN DE JUGADORES HISTÓRICOS --- */
+#jugadores-historicos {
+    /* Esta sección siempre ocupa todo el ancho, forzando un salto de línea */
+    flex: 1 1 100%; 
+}
+
+.lista-jugadores {
+    display: flex;
+    flex-wrap: wrap; 
+    gap: 20px;
+    justify-content: space-around; 
+    margin-top: 20px;
+}
+
+.jugador-card {
+    flex: 1 1 280px; 
+    max-width: 300px;
+    padding: 15px;
+    border: 1px solid #e0e0e0;
+    border-radius: 10px;
+    text-align: center;
+    background-color: #ffffff; 
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    transition: transform 0.3s ease;
+}
+
+.jugador-card:hover {
+    transform: translateY(-5px);
+}
+
+.jugador-card img {
+    width: 100%;
+    max-height: 200px; 
+    object-fit: cover; 
+    border-radius: 8px;
+    margin-bottom: 10px;
+    border: 3px solid #006400; 
+}
+
+.jugador-card h3 {
+    color: #004d00;
+    margin: 5px 0;
+}
+
+.link-wiki {
+    display: inline-block;
+    margin-top: 10px;
+    padding: 8px 15px;
+    background-color: #228B22; 
+    color: white;
+    text-decoration: none;
+    border-radius: 5px;
+    font-weight: bold;
+    transition: background-color 0.3s ease;
+}
+
+.link-wiki:hover {
+    background-color: #006400; 
+}
+
+/* --- ESTILOS DE BOTONES Y FOOTER --- */
+#mejor {
+  background-color: green;
+  color: white;
+  border: none;
+  padding: 10px 20px;
+  border-radius: 8px;
+  cursor: pointer;
+}
+
+#mejor:hover {
+  background-color: darkgreen;
+}
+
+#oscuro {
+  background-color: #000000;
+  color: #e3e3e3;
+  border: none;
+  padding: 10px 20px;
+  border-radius: 8px ;
+  cursor:  pointer;
+}
+
+footer {
+  text-align: center;
+  padding: 15px;
+  margin-top: 20px;
+  background: #222;
+  color: white;
+}
+
+/* --- ADAPTACIÓN AL MODO OSCURO --- */
+
+body.oscuro {
+  background-color: #121212;
+  color: #ffffff; 
+}
+
+body.oscuro header {
+  background: linear-gradient(90deg, #111, #333);
+}
+
+body.oscuro nav {
+  background: #000000;
+}
+
+body.oscuro a {
+  color: #90ee90; 
+}
+
+body.oscuro #palmares {
+  background: #1e1e1e;
+  color: #ffffff;
+}
+
+/* Modo oscuro para TODOS los bloques de contenido (Decoración) */
+body.oscuro .historia-bloque, body.oscuro .fundacion {
+  background: #1e1e1e;
+  color: #ffffff;
+}
+
+body.oscuro .resultado-destacado {
+  background-color: #2a2a2a;
+  border-left: 5px solid #90ee90;
+}
+
+/* Modo Oscuro para las tarjetas de jugadores */
+body.oscuro .jugador-card {
+  background-color: #2a2a2a; 
+  border: 1px solid #444;
+}
+
+body.oscuro .jugador-card h3 {
+  color: #90ee90; 
+}
+
+body.oscuro .link-wiki {
+  background-color: #90ee90; 
+  color: #1e1e1e;
+}
+
+body.oscuro .link-wiki:hover {
+  background-color: #c0fddf;
+}
